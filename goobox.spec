@@ -1,5 +1,5 @@
 %define name goobox
-%define version 1.9.1
+%define version 1.9.2
 %define release %mkrel 1
 
 Summary: CD player and ripper for GNOME
@@ -46,8 +46,7 @@ echo "%lang($(basename $omf|sed -e s/%name-// -e s/.omf//)) $(echo $omf|sed -e s
 done
 
 desktop-file-install --vendor="" \
-  --remove-category="Application" \
-  --add-category="X-MandrivaLinux-Multimedia-Sound" \
+  --add-category="Audio;Player" \
   --dir $RPM_BUILD_ROOT%{_datadir}/applications $RPM_BUILD_ROOT%{_datadir}/applications/*
 
 
