@@ -12,7 +12,6 @@ Patch: goobox-1.9.2-sg-build.patch
 License: GPL
 Group: Sound
 Url: http://www.gnome.org
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: libgstreamer0.10-devel
 BuildRequires: libmusicbrainz-devel
 BuildRequires: libgnomeui2-devel >= 2.6
