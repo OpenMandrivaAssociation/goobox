@@ -13,7 +13,7 @@ License: GPL
 Group: Sound
 Url: http://www.gnome.org
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: libgstreamer0.10-devel
+BuildRequires: gstreamer0.10-devel
 BuildRequires: libmusicbrainz-devel
 BuildRequires: libgnomeui2-devel >= 2.6
 BuildRequires: libglade2.0-devel
