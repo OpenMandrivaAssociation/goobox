@@ -1,6 +1,6 @@
 %define name goobox
 %define version 2.0.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: CD player and ripper for GNOME
 Name: %{name}
