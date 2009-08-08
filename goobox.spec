@@ -1,12 +1,13 @@
 %define name goobox
 %define version 2.0.0
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary: CD player and ripper for GNOME
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/goobox/%{name}-%{version}.tar.bz2
+Patch: goobox-2.0.0-format-strings.patch
 License: GPLv2+
 Group: Sound
 Url: http://www.gnome.org
@@ -17,7 +18,6 @@ BuildRequires: libgnomeui2-devel >= 2.6
 BuildRequires: libglade2.0-devel
 BuildRequires: libnotify-devel >= 0.3.0
 BuildRequires: scrollkeeper
-BuildRequires: perl-XML-Parser
 BuildRequires: gnome-doc-utils libxslt-proc
 BuildRequires: desktop-file-utils
 BuildRequires: intltool
@@ -31,6 +31,7 @@ Goobox is a CD player and ripper that always knowns just what to do.
 
 %prep
 %setup -q
+%patch -p1
 
 %build
 %configure2_5x
