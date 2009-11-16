@@ -21,6 +21,7 @@ BuildRequires: gnome-doc-utils libxslt-proc
 BuildRequires: desktop-file-utils
 BuildRequires: intltool
 BuildRequires: brasero-devel
+BuildRequires: libunique-devel
 Requires: gstreamer0.10-plugins-good
 Requires: dbus-x11
 Requires(post): scrollkeeper >= 0.3
