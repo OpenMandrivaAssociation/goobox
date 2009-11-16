@@ -1,5 +1,5 @@
 %define name goobox
-%define version 2.0.1
+%define version 2.1.1
 %define release %mkrel 1
 
 Summary: CD player and ripper for GNOME
@@ -20,6 +20,7 @@ BuildRequires: scrollkeeper
 BuildRequires: gnome-doc-utils libxslt-proc
 BuildRequires: desktop-file-utils
 BuildRequires: intltool
+BuildRequires: brasero-devel
 Requires: gstreamer0.10-plugins-good
 Requires: dbus-x11
 Requires(post): scrollkeeper >= 0.3
@@ -76,8 +77,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc README NEWS AUTHORS ChangeLog
 %_sysconfdir/gconf/schemas/%name.schemas
 %_bindir/%name
-%_libdir/bonobo/servers/GNOME_Goobox.server
-%_datadir/application-registry/goobox.applications
 %_datadir/applications/goobox.desktop
 %_datadir/%name
 %_datadir/icons/hicolor/*/apps/goobox.*
