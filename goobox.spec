@@ -1,12 +1,13 @@
 %define name goobox
 %define version 2.2.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: CD player and ripper for GNOME
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/goobox/%{name}-%{version}.tar.bz2
+Patch0: http://www.nyx.net/~amunkres/goobox/goobox-2.2.0-libnotify-0.7.patch
 License: GPLv2+
 Group: Sound
 Url: http://www.gnome.org
@@ -24,22 +25,21 @@ BuildRequires: brasero-devel
 BuildRequires: unique-devel
 Requires: gstreamer0.10-plugins-good
 Requires: dbus-x11
-Requires(post): scrollkeeper >= 0.3
-Requires(postun): scrollkeeper >= 0.3
 
 %description
 Goobox is a CD player and ripper that always knowns just what to do.
 
 %prep
 %setup -q
+%patch0 -p0
 
 %build
-%configure2_5x
+%configure2_5x --disable-schemas-install --disable-scrollkeeper
 %make
 
 %install
 rm -rf $RPM_BUILD_ROOT %name.lang
-GCONF_DISABLE_MAKEFILE_SCHEMA_INSTALL=1 %makeinstall_std _ENABLE_SK=no
+%makeinstall_std
 %find_lang %name --with-gnome
 for omf in %buildroot%_datadir/omf/%name/%name-??*.omf;do 
 echo "%lang($(basename $omf|sed -e s/%name-// -e s/.omf//)) $(echo $omf|sed -e s!%buildroot!!)" >> %name.lang
