@@ -3,7 +3,7 @@
 Summary:	CD player and ripper for GNOME
 Name:		goobox
 Version:	3.3.2
-Release:	1
+Release:	2
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 License:	GPLv2+
 Group:		Sound
