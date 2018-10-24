@@ -44,7 +44,7 @@ Goobox is a CD player and ripper that always knows just what to do.
 %{_datadir}/GConf/gsettings/%{name}.convert
 %{_datadir}/glib-2.0/schemas/*.xml
 %{_datadir}/applications/org.gnome.Goobox.desktop
-%{_datadir}/icons/hicolor/*/apps/%{name}.*
+%{_datadir}/icons/hicolor/*/apps/*.*
 %{_datadir}/metainfo/org.gnome.Goobox.appdata.xml
 
 
