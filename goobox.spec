@@ -2,9 +2,9 @@
 
 Summary:	CD player and ripper for GNOME
 Name:		goobox
-Version:	3.4.3
+Version:	3.5.0
 Release:	1
-Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	https://github.com/GNOME/goobox/archive/%{name}-%{version}.zip
 License:	GPLv2+
 Group:		Sound
 Url:		http://www.gnome.org
@@ -46,5 +46,3 @@ Goobox is a CD player and ripper that always knows just what to do.
 %{_datadir}/applications/org.gnome.Goobox.desktop
 %{_datadir}/icons/hicolor/*/apps/*.*
 %{_datadir}/metainfo/org.gnome.Goobox.appdata.xml
-
-
