@@ -7,7 +7,7 @@ Release:	1
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 License:	GPLv2+
 Group:		Sound
-Url:		http://www.gnome.org
+Url:		https://www.gnome.org
 BuildRequires:	pkgconfig(glib-2.0) >= 2.28
 BuildRequires:	pkgconfig(gstreamer-1.0) >= 1.0.0
 BuildRequires:	pkgconfig(gthread-2.0)
